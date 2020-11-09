@@ -38,6 +38,17 @@ namespace _3Lab_Classes
             Console.Write("Вектор 5:\t");
             someVector5.VectorOut();
 
+            Vector.infoOut();
+            Console.WriteLine();
+
+            Console.WriteLine("Вектор 4 + число 3:");
+            someVector4.Addition(3);
+            someVector4.VectorOut();
+
+            Console.WriteLine("Вектор 5 * на 2:");
+            someVector5.Multiplication(2);
+            someVector5.VectorOut();
+
             Console.ReadKey();
             Console.Clear();
         }

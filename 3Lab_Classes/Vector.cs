@@ -13,6 +13,63 @@ namespace _3Lab_Classes
 
 
 
+        public int ElementsAmount
+        {
+            get
+            {
+                return elementsAmount;
+            }
+
+            set
+            {
+                elementsAmount = value;
+            }
+        }
+
+        public int[] Array
+        {
+            get
+            {
+                return array;
+            }
+
+            set
+            {
+                array = value;
+            }
+        }
+
+        public int State
+        {
+            get
+            {
+                return state;
+            }
+
+            private set
+            {
+                state = value;
+            }
+        }
+
+        public int IDD
+        {
+            get
+            {
+                return ID;
+            }
+        }
+
+        public int ObjAmount
+        {
+            get
+            {
+                return objAmount;
+            }
+        }
+
+
+
         static Vector()
         {
             Console.WriteLine("Создан первый вектор");
@@ -117,6 +174,44 @@ namespace _3Lab_Classes
                 Console.WriteLine();
             }
             Console.WriteLine();
+        }
+
+        public Vector Addition(int number)
+        {
+            for (int i = 0; i < this.elementsAmount; ++i)
+            {
+                this.array[i] += number;
+            }
+
+            if (this.elementsAmount != 0 && this.array != null)
+            {
+                state = 0;
+            }
+            else
+            {
+                state = 1;
+            }
+
+            return this;
+        }
+
+        public Vector Multiplication(int number)
+        {
+            for (int i = 0; i < this.elementsAmount; ++i)
+            {
+                this.array[i] *= number;
+            }
+
+            if (this.elementsAmount != 0 && this.array != null)
+            {
+                state = 0;
+            }
+            else
+            {
+                state = 1;
+            }
+
+            return this;
         }
     }   
 }
