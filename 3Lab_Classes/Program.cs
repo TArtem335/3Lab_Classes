@@ -72,6 +72,34 @@ namespace _3Lab_Classes
 
             Console.ReadKey();
             Console.Clear();
+
+            //--------------------------Задание 3----------------------------
+            Vector[] arrayOfVectors = new Vector[7];
+
+            int[] numbersForArray1 = { 1, 2, 9, 4 };
+            int[] numbersForArray2 = { 7, 0, 3, 5, 6 };
+            int[] numbersForArray3 = { 2, 6, 1 };
+            int[] numbersForArray4 = { 7, 1, 0, 1, 6 };
+            int[] numbersForArray5 = { 1, 8, 8, 8, 3, 4, 6 };
+            int[] numbersForArray6 = { 9, 0, 2, 1, 7 };
+            int[] numbersForArray7 = { 6, 4, 3, 0, 1, 7 };
+
+            arrayOfVectors[0] = new Vector(4, numbersForArray1);
+            arrayOfVectors[1] = new Vector(5, numbersForArray2);
+            arrayOfVectors[2] = new Vector(3, numbersForArray3);
+            arrayOfVectors[3] = new Vector(5, numbersForArray4);
+            arrayOfVectors[4] = new Vector(numbersForArray5);
+            arrayOfVectors[5] = new Vector(numbersForArray6);
+            arrayOfVectors[6] = new Vector(numbersForArray7);
+
+            for (int i = 0; i < arrayOfVectors.Length; ++i)
+            {
+                Console.Write($"Вектор {i + 1}:\t");
+                arrayOfVectors[i].VectorOut();
+            }
+
+            Console.ReadKey();
+            Console.Clear();
         }
     }
 }
