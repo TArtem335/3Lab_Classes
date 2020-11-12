@@ -247,5 +247,29 @@ namespace _3Lab_Classes
 
             return ($"Количество элементов в векторе - {this.elementsAmount}. Вектор: {numbers}");
         }
+
+        public bool ZeroCheck()
+        {
+            foreach (int element in this.array)
+            {
+                if (element == 0)
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+        public int Module()
+        {
+            int summ = 0;
+            foreach (int element in this.array)
+            {
+                summ += element;
+            }
+
+            return summ;
+        }
     }   
 }

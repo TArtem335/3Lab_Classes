@@ -98,6 +98,31 @@ namespace _3Lab_Classes
                 arrayOfVectors[i].VectorOut();
             }
 
+            //--------------------------Задание 3a----------------------------
+            Console.WriteLine("Элемент 0 есть у векторов:");
+            for (int i = 0; i < arrayOfVectors.Length; ++i)
+            {
+                if (arrayOfVectors[i].ZeroCheck())
+                {
+                    Console.Write($"\t{i + 1}  ---  ");
+                    arrayOfVectors[i].VectorOut();
+                }
+            }
+
+            //--------------------------Задание 3b----------------------------
+            int max = arrayOfVectors[0].Module();
+            Vector maxVector = arrayOfVectors[0];
+            foreach (Vector element in arrayOfVectors)
+            {
+                if (element.Module() > max)
+                {
+                    maxVector = element;
+                    max = element.Module();
+                }
+            }
+            Console.WriteLine("Максимальный модуль имеет вектор:");
+            maxVector.VectorOut();
+
             Console.ReadKey();
             Console.Clear();
         }
