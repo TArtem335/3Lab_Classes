@@ -49,6 +49,27 @@ namespace _3Lab_Classes
             someVector5.Multiplication(2);
             someVector5.VectorOut();
 
+            if (someVector5.Equals(someVector2))
+            {
+                Console.WriteLine("Вектора 5 и 2 равны");
+            }
+            else
+            {
+                Console.WriteLine("Вектора 5 и 2 не равны");
+            }
+
+            if (someVector5.Equals(someVector3))
+            {
+                Console.WriteLine("Вектора 5 и 3 равны");
+            }
+            else
+            {
+                Console.WriteLine("Вектора 5 и 3 не равны");
+            }
+            Console.WriteLine();
+
+            Console.WriteLine("Вектор 5 в виде строки:\n" + someVector5.ToString());
+
             Console.ReadKey();
             Console.Clear();
         }

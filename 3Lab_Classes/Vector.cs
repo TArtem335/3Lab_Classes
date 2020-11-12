@@ -103,7 +103,7 @@ namespace _3Lab_Classes
                 state = 1;
             }
 
-            ID = 1;
+            ID = GetHashCode();
             ++objAmount;
         }
 
@@ -126,7 +126,7 @@ namespace _3Lab_Classes
                 state = 1;
             }
 
-            ID = 1;
+            ID = GetHashCode();
             ++objAmount;
         }
 
@@ -149,7 +149,7 @@ namespace _3Lab_Classes
                 state = 1;
             }
 
-            ID = 1;
+            ID = GetHashCode();
             ++objAmount;
         }
 
@@ -212,6 +212,40 @@ namespace _3Lab_Classes
             }
 
             return this;
+        }
+
+        public bool Equals(Vector someVector)
+        {
+            if (this.elementsAmount != someVector.elementsAmount)
+            {
+                return false;
+            }
+
+            for (int i = 0; i < this.elementsAmount; ++i)
+            {
+                if (this.array[i] != someVector.array[i])
+                {
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
+        override public int GetHashCode()
+        {
+            return (int)(elementsAmount + array[0] + 0.5 * array[array.Length - 1]);
+        }
+
+        override public string ToString()
+        {
+            string numbers = "";
+            foreach (int element in this.array)
+            {
+                numbers += element + " ";
+            }
+
+            return ($"Количество элементов в векторе - {this.elementsAmount}. Вектор: {numbers}");
         }
     }   
 }
